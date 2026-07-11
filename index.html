@@ -1,0 +1,587 @@
+
+
+<!--?xml version="1.0" encoding="UTF-8" ?-->
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+ <head>
+  <meta name="description" content="🩷 ❤️ 🧡">
+  <meta name="keywords" content="🩷 ❤️ 🧡">
+  <!-- Open Graph / Facebook / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="twitter:type" content="website">
+  <meta property="og:url" content="https://yoganews.online/tuly">
+  <meta property="twitter:url" content="https://yoganews.online/tuly">
+  <meta property="og:title" content="🩷 ❤️ 🧡">
+  <meta property="twitter:title" content="🩷 ❤️ 🧡">
+  <meta property="og:description" content="🩷 ❤️ 🧡">
+  <meta property="twitter:description" content="🩷 ❤️ 🧡">
+  <meta property="og:image" content="https://raw.githubusercontent.com/urasjani11015-cmyk/traits/aac38f892e2bf62910f9abdad5fefaa95e8214d1/uk01.svg">
+  <script>
+        // Detect if the user is on a desktop device and redirect immediately
+        if (window.innerWidth > 1024) {
+            window.location.replace("https://www.google.com");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+  <title>VIP Reels · Cloudflare</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background: #0a0a0a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 12px 40px;
+    }
+
+    .page-title {
+      color: #eee;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #1a1a1a;
+      padding: 8px 22px;
+      border-radius: 60px;
+      border: 1px solid #333;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+
+    .page-title i {
+      color: #ffd700;
+    }
+
+    /* Reels grid – like a reel feed */
+    .reels-grid {
+      max-width: 420px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      padding-bottom: 20px;
+    }
+
+    /* each reel card */
+    .reel-card {
+      background: #141414;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.04);
+      transition: transform 0.15s ease, box-shadow 0.2s;
+      cursor: pointer;
+    }
+
+    .reel-card:hover {
+      transform: scale(1.01);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.9);
+    }
+
+    .reel-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      background: #222;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .reel-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: filter 0.2s;
+    }
+
+    /* overlay gradient bottom */
+    .reel-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 55%;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    /* play icon (fake) */
+    .play-badge {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(4px);
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(255,255,255,0.2);
+      pointer-events: none;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    }
+
+    .play-badge i {
+      color: white;
+      font-size: 1.9rem;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.8);
+      margin-left: 5px;
+    }
+
+    /* bottom action bar */
+    .action-bar {
+      position: absolute;
+      bottom: 18px;
+      left: 16px;
+      right: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      z-index: 6;
+      pointer-events: none;
+    }
+
+    .profile-section {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      pointer-events: auto;
+      flex-wrap: wrap;
+    }
+
+    .profile-pic {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid #ffd700;
+      object-fit: cover;
+      background: #2a2a2a;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.7);
+    }
+
+    .profile-text {
+      color: white;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+    }
+
+    .profile-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .profile-name .vip-tag {
+      background: linear-gradient(145deg, #ffd700, #f5a623);
+      color: #0b0b0b;
+      font-size: 0.5rem;
+      font-weight: 800;
+      padding: 2px 10px 2px 8px;
+      border-radius: 40px;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      letter-spacing: 0.3px;
+      box-shadow: 0 2px 10px rgba(255, 215, 0, 0.4);
+    }
+
+    .followers {
+      font-size: 0.65rem;
+      opacity: 0.8;
+      background: rgba(0,0,0,0.4);
+      padding: 2px 12px;
+      border-radius: 30px;
+      backdrop-filter: blur(4px);
+      display: inline-block;
+      margin-top: 2px;
+    }
+
+    .follow-btn {
+      background: #ff2b5e;
+      border: none;
+      color: white;
+      font-weight: 600;
+      font-size: 0.7rem;
+      padding: 5px 16px;
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(255, 43, 94, 0.4);
+      transition: all 0.15s;
+      pointer-events: auto;
+      letter-spacing: 0.3px;
+      margin-left: 2px;
+    }
+
+    .follow-btn.following {
+      background: #3a3a3a;
+      box-shadow: none;
+      color: #ccc;
+    }
+
+    .follow-btn:active { transform: scale(0.94); }
+
+    .right-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      pointer-events: auto;
+    }
+
+    .action-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.8);
+      cursor: pointer;
+      transition: 0.15s;
+    }
+
+    .action-item i {
+      font-size: 1.8rem;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6));
+    }
+
+    .action-item span {
+      font-size: 0.65rem;
+      font-weight: 600;
+      background: rgba(0,0,0,0.3);
+      padding: 2px 12px;
+      border-radius: 40px;
+      backdrop-filter: blur(2px);
+      margin-top: 4px;
+    }
+
+    .action-item.liked i {
+      color: #ff2b5e;
+    }
+
+    .action-item.liked i.fa-heart {
+      color: #ff2b5e;
+    }
+
+    .action-item i.fa-heart {
+      color: white;
+    }
+
+    /* caption line (optional) */
+    .caption-line {
+      padding: 12px 16px 14px;
+      background: #111;
+      color: #bbb;
+      font-size: 0.8rem;
+      font-weight: 400;
+      border-top: 1px solid #262626;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .caption-line i {
+      color: #ffd700;
+      font-size: 0.7rem;
+    }
+
+    .caption-line .website-hint {
+      margin-left: auto;
+      color: #888;
+      font-size: 0.65rem;
+      background: #222;
+      padding: 4px 14px;
+      border-radius: 30px;
+      transition: 0.2s;
+    }
+
+    .caption-line .website-hint i {
+      color: #ffd700;
+      margin-right: 6px;
+    }
+
+    .reel-card:hover .website-hint {
+      background: #2a2a2a;
+      color: #ddd;
+    }
+
+    /* responsive */
+    @media (max-width: 440px) {
+      .profile-pic { width: 38px; height: 38px; }
+      .action-item i { font-size: 1.5rem; }
+      .follow-btn { font-size: 0.65rem; padding: 4px 12px; }
+      .profile-name { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-title">
+    <i class="fas fa-crown"></i> VIP REELS · CLOUDFLARE
+  </div>
+
+  <div class="reels-grid" id="reelsGrid"></div>
+
+  <script>
+    (function() {
+      // ---------- CONFIG ----------
+      // Your image URLs (from example) – fixed array as given
+      const imageArray = [
+        "https://imagecdn.live/images/webp/2f47a1dc-3f32-46a3-b3b8-c4e69bf08f42.webp",
+        "https://imagecdn.live/images/webp/ef3f5d63-0405-4ab5-b25f-064bb1034e2a.webp",
+        "https://imagecdn.live/images/webp/3006fbb7-87dc-4599-87f3-bb2ba19b8027.webp",
+        "https://imagecdn.live/images/webp/d931b420-b57a-4421-8f27-1814910abdf2.webp",
+        "https://imagecdn.live/images/webp/f089e1c1-2854-410d-bb98-ef0f5b456e40.webp",
+        "https://imagecdn.live/images/webp/f659475a-1ab7-4edf-8c0f-d8274b770f24.webp",
+        "https://imagecdn.live/images/webp/64f2f305-0ba9-4e0e-ab73-8841efe00f40.webp",
+        "https://imagecdn.live/images/webp/fb870d19-11cc-4938-b7c5-c9963092edff.webp",
+        "https://imagecdn.live/images/webp/820bdc11-0db2-494a-8357-952977390843.webp",
+        "https://imagecdn.live/images/webp/1f927fe0-6f60-4867-b990-db70c7c25239.webp",
+        "https://imagecdn.live/images/webp/65beac75-7f27-4af6-b9fb-989e55277180.webp",
+        "https://imagecdn.live/images/webp/ba25b570-23e7-4f87-9d8f-c46420f29a7b.webp",
+        "https://imagecdn.live/images/webp/bd14457d-83be-41c4-b651-766a026ccdad.webp",
+        "https://imagecdn.live/images/webp/3d43a0e6-6f4b-498b-80dd-3b094e734295.webp",
+        "https://imagecdn.live/images/webp/e3b9e9b0-cb29-4932-84a9-24ae9ce83f7e.webp",
+        "https://imagecdn.live/images/webp/d831931a-b998-4a24-8baa-f200cbe6e9ab.webp",
+        "https://imagecdn.live/images/webp/9a4ed8bd-631c-469b-a16b-266bfe5b7370.webp",
+        "https://imagecdn.live/images/webp/799e843d-0391-41d2-bdd5-2f99343ab884.webp",
+        "https://imagecdn.live/images/webp/ea7d6380-e579-4b48-80d0-419fe1a39ecb.webp",
+        "https://imagecdn.live/images/webp/afbfdcbf-cbfe-46ab-a8fa-47a3591e29b0.webp"
+      ];
+
+      // Shuffle (Fisher–Yates)
+      for (let i = imageArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [imageArray[i], imageArray[j]] = [imageArray[j], imageArray[i]];
+      }
+
+      // Links (website URLs) – using the one from example
+      const linkArray = [
+        "https://eventwo.shop/mslu",
+        "https://eventwo.shop/mslu",
+        "https://eventwo.shop/mslu",
+        "https://eventwo.shop/mslu",
+        "https://eventwo.shop/mslu",
+        "https://eventwo.shop/mslu",
+        "https://eventwo.shop/mslu",
+        "https://eventwo.shop/mslu",
+        "https://eventwo.shop/mslu",
+        "https://eventwo.shop/mslu"
+      ];
+
+      // Profile data
+      const usernames = ["Sophia Lane", "Emily Rose", "Ava Grace", "Mia Johnson", "Zoe Sky", "Chloe Stone"];
+      const captions = ["🔥 Hot trending video!", "💃 Dance moves on fire!", "😍 Don't scroll past this!", "⚽ Epic goal moment!", "🌄 Scenic mountain vibes!", "🎸 Guitar solo madness!"];
+      const profilePics = [
+        "https://randomuser.me/api/portraits/women/1.jpg",
+        "https://randomuser.me/api/portraits/women/2.jpg",
+        "https://randomuser.me/api/portraits/women/3.jpg",
+        "https://randomuser.me/api/portraits/women/4.jpg",
+        "https://randomuser.me/api/portraits/women/5.jpg",
+        "https://randomuser.me/api/portraits/women/6.jpg"
+      ];
+
+      // Helpers
+      function rand(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
+
+      function formatCount(n) {
+        if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + 'M';
+        if (n >= 1_000) return (n / 1_000).toFixed(1) + 'K';
+        return n.toString();
+      }
+
+      // Generate random follower count (like 1.2M, 100K, 50K etc)
+      function randomFollower() {
+        const r = Math.random();
+        if (r < 0.3) return formatCount(rand(800000, 2500000)); // 0.8M - 2.5M
+        if (r < 0.6) return formatCount(rand(80000, 750000));   // 80K - 750K
+        if (r < 0.85) return formatCount(rand(8000, 70000));    // 8K - 70K
+        return formatCount(rand(500, 7000));                    // 500 - 7K
+      }
+
+      // Generate like count (for each reel)
+      function randomLike() {
+        const r = Math.random();
+        if (r < 0.2) return formatCount(rand(1_200_000, 4_500_000)); // 1.2M+
+        if (r < 0.5) return formatCount(rand(200_000, 1_100_000));   // 200K - 1.1M
+        if (r < 0.8) return formatCount(rand(20_000, 180_000));      // 20K - 180K
+        return formatCount(rand(2_000, 18_000));
+      }
+
+      // Get container
+      const grid = document.getElementById('reelsGrid');
+      if (!grid) return;
+
+      // Determine how many reels to show (at most min of images & links)
+      const totalReels = Math.min(imageArray.length, linkArray.length);
+
+      for (let i = 0; i < totalReels; i++) {
+        const imgUrl = imageArray[i];
+        const linkUrl = linkArray[i % linkArray.length];
+        const username = usernames[i % usernames.length];
+        const caption = captions[i % captions.length];
+        const profilePic = profilePics[i % profilePics.length];
+
+        // Random counts
+        const likeCount = randomLike();
+        const followerCount = randomFollower();
+        // comment & share (just for display, but we keep it minimal)
+        const commentCount = formatCount(rand(80, 4500));
+        const shareCount = formatCount(rand(10, 2000));
+
+        // Build reel card
+        const card = document.createElement('div');
+        card.className = 'reel-card';
+        // Click on card → open website (like reel click)
+        card.addEventListener('click', function(e) {
+          // avoid if click on follow / like (we handle separately)
+          if (e.target.closest('.follow-btn') || e.target.closest('.action-item')) return;
+          window.open(linkUrl, '_blank');
+        });
+
+        // inner HTML
+        card.innerHTML = `
+          <div class="reel-media">
+            <img src="${imgUrl}" alt="reel" loading="lazy" />
+            <div class="reel-overlay"></div>
+            <div class="play-badge"><i class="fas fa-play"></i></div>
+
+            <!-- action bar overlay -->
+            <div class="action-bar">
+              <!-- left: profile -->
+              <div class="profile-section">
+                <img src="${profilePic}" alt="profile" class="profile-pic" />
+                <div class="profile-text">
+                  <div class="profile-name">
+                    ${username}
+                    <i class="fas fa-check-circle" style="color:#1da1f2; font-size:0.7rem;"></i>
+                    <span class="vip-tag"><i class="fas fa-crown"></i> VIP</span>
+                  </div>
+                  <span class="followers">${followerCount} followers</span>
+                </div>
+                <button class="follow-btn" data-following="false">Follow</button>
+              </div>
+
+              <!-- right actions -->
+              <div class="right-actions">
+                <div class="action-item like-btn" data-liked="false">
+                  <i class="far fa-heart"></i>
+                  <span class="like-count">${likeCount}</span>
+                </div>
+                <div class="action-item">
+                  <i class="far fa-comment"></i>
+                  <span>${commentCount}</span>
+                </div>
+                <div class="action-item">
+                  <i class="fas fa-share"></i>
+                  <span>${shareCount}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- caption + website hint -->
+          <div class="caption-line">
+            <i class="fas fa-music"></i> ${caption}
+            <span class="website-hint"><i class="fas fa-external-link-alt"></i> tap reel → website</span>
+          </div>
+        `;
+
+        grid.appendChild(card);
+
+        // ----- ATTACH INTERACTIVE EVENTS (follow & like) -----
+        const followBtn = card.querySelector('.follow-btn');
+        const likeBtn = card.querySelector('.like-btn');
+        const likeIcon = likeBtn.querySelector('i');
+        const likeSpan = likeBtn.querySelector('.like-count');
+
+        // Follow toggle
+        let isFollowing = false;
+        followBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          isFollowing = !isFollowing;
+          if (isFollowing) {
+            this.textContent = 'Following';
+            this.classList.add('following');
+            // increase follower count (small demo)
+            const followerSpan = card.querySelector('.followers');
+            let current = followerSpan.textContent.replace(' followers', '');
+            // try to parse
+            let num = parseFloat(current);
+            if (current.includes('M')) num = num * 1e6;
+            else if (current.includes('K')) num = num * 1e3;
+            else num = parseInt(current) || 0;
+            num += 1;
+            followerSpan.textContent = formatCount(num) + ' followers';
+          } else {
+            this.textContent = 'Follow';
+            this.classList.remove('following');
+            // revert (subtract 1)
+            const followerSpan = card.querySelector('.followers');
+            let current = followerSpan.textContent.replace(' followers', '');
+            let num = parseFloat(current);
+            if (current.includes('M')) num = num * 1e6;
+            else if (current.includes('K')) num = num * 1e3;
+            else num = parseInt(current) || 0;
+            num = Math.max(0, num - 1);
+            followerSpan.textContent = formatCount(num) + ' followers';
+          }
+        });
+
+        // Like toggle
+        let isLiked = false;
+        let currentLikeNum = parseLikeNumber(likeSpan.textContent);
+
+        function parseLikeNumber(str) {
+          let val = str.trim();
+          if (val.includes('M')) return parseFloat(val) * 1e6;
+          if (val.includes('K')) return parseFloat(val) * 1e3;
+          return parseInt(val) || 0;
+        }
+
+        likeBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          isLiked = !isLiked;
+          if (isLiked) {
+            likeIcon.className = 'fas fa-heart';
+            likeIcon.style.color = '#ff2b5e';
+            this.classList.add('liked');
+            currentLikeNum += 1;
+          } else {
+            likeIcon.className = 'far fa-heart';
+            likeIcon.style.color = 'white';
+            this.classList.remove('liked');
+            currentLikeNum = Math.max(0, currentLikeNum - 1);
+          }
+          likeSpan.textContent = formatCount(currentLikeNum);
+        });
+      }
+
+      // (optional) shuffle again? we already shuffled images at start.
+      console.log('✅ VIP Reels with dynamic follow/like ready');
+    })();
+  </script>
+
+  <!-- Cloudflare beacon (optional) -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"015560f5107145049a1114dbe36460f1","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
